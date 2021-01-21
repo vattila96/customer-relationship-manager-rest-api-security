@@ -1,18 +1,15 @@
-package com.luv2code.springdemo.service;
+package com.attilavarga.customer.relationship.manager.rest.api.security.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.luv2code.springdemo.dao.CustomerDAO;
-import com.luv2code.springdemo.entity.Customer;
+import com.attilavarga.customer.relationship.manager.rest.api.security.dao.CustomerDAO;
+import com.attilavarga.customer.relationship.manager.rest.api.security.entity.Customer;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-	// need to inject customer dao
 	@Autowired
 	private CustomerDAO customerDAO;
 	
@@ -24,27 +21,19 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	@Transactional
-	public void saveCustomer(Customer theCustomer) {
-
-		customerDAO.saveCustomer(theCustomer);
+	public void saveCustomer(Customer customer) {
+		customerDAO.saveCustomer(customer);
 	}
 
 	@Override
 	@Transactional
-	public Customer getCustomer(int theId) {
-		
-		return customerDAO.getCustomer(theId);
+	public Customer getCustomer(int id) {
+		return customerDAO.getCustomer(id);
 	}
 
 	@Override
 	@Transactional
-	public void deleteCustomer(int theId) {
-		
-		customerDAO.deleteCustomer(theId);
+	public void deleteCustomer(int id) {
+		customerDAO.deleteCustomer(id);
 	}
 }
-
-
-
-
-

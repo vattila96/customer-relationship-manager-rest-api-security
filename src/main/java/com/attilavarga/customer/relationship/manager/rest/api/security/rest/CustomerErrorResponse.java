@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.rest;
+package com.attilavarga.customer.relationship.manager.rest.api.security.rest;
 
 public class CustomerErrorResponse {
 
@@ -6,9 +6,7 @@ public class CustomerErrorResponse {
 	private String message;
 	private long timeStamp;
 	
-	public CustomerErrorResponse() {
-		
-	}
+	public CustomerErrorResponse() {}
 
 	public CustomerErrorResponse(int status, String message, long timeStamp) {
 		this.status = status;
@@ -39,12 +37,4 @@ public class CustomerErrorResponse {
 	public void setTimeStamp(long timeStamp) {
 		this.timeStamp = timeStamp;
 	}
-	
 }
-
-
-
-
-
-
-

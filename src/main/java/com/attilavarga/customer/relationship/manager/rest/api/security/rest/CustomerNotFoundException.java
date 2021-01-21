@@ -1,9 +1,10 @@
-package com.luv2code.springdemo.rest;
+package com.attilavarga.customer.relationship.manager.rest.api.security.rest;
 
 public class CustomerNotFoundException extends RuntimeException {
 
-	public CustomerNotFoundException() {
-	}
+	private static final long serialVersionUID = 1L;
+
+	public CustomerNotFoundException() {}
 
 	public CustomerNotFoundException(String message) {
 		super(message);
@@ -21,5 +22,4 @@ public class CustomerNotFoundException extends RuntimeException {
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
-
 }
