@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.luv2code.springdemo</groupId>
-	<artifactId>spring-crm-rest-security-solution</artifactId>
+	<groupId>com.attilavarga.customer.relationship.manager.rest.api.security</groupId>
+	<artifactId>customer-relationship-manager-rest-api-security</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 
@@ -22,7 +22,6 @@
 
 	<dependencies>
 
-		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -41,15 +40,11 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- Add Jackson for JSON converters -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.5</version>
 		</dependency>
-
-		<!-- Spring Security -->
-		<!-- spring-security-web and spring-security-config -->
 		
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
@@ -63,28 +58,24 @@
 		    <version>${springsecurity.version}</version>
 		</dependency>	
 
-		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
 		</dependency>
 
-		<!-- C3PO -->
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>${c3po.version}</version>
 		</dependency>
 
-		<!-- Servlet+JSP+JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -97,7 +88,6 @@
 			<version>2.3.1</version>
 		</dependency>
 
-		<!-- to compensate for java 9+ not including jaxb -->
 		<dependency>
 		    <groupId>javax.xml.bind</groupId>
 		    <artifactId>jaxb-api</artifactId>
@@ -108,20 +98,14 @@
 
 	<build>
 
-		<finalName>spring-crm-rest-security</finalName>
+		<finalName>customer-relationship-manager-rest-api-security</finalName>
 
 		<plugins>
-
-			<!-- Builds a Web Application Archive (WAR) file from the project output 
-				and its dependencies. -->
 			<plugin>
-				<!-- Add Maven coordinates (GAV) for: maven-war-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
-
 		</plugins>
 	</build>
 </project>
-
